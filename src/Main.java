@@ -17,12 +17,12 @@ public class Main {
 class Mult {
     private int valor = 1;
 
-    public void multiplicar(int fator) {
+    public synchronized void multiplicar(int fator) {
         this.valor *= fator;
         this.getValor();
     }
 
-    public void getValor() {
+    public synchronized void getValor() {
         System.out.println(this.valor);
     }
 }
